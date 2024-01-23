@@ -699,7 +699,7 @@ If you were writing a library that created a pairing of state with its function 
 One way to think about what `bind(..)` does under the covers is that it creates a closure over a function, like this:
 
 ```js
-function bind(orinFn,thisObj) {
+function bind(origFn,thisObj) {
     return function boundFn(...args) {
         return origFn.apply( thisObj, args );
     };
